@@ -30,4 +30,14 @@ public class StudentController {
         return service.addStudent(student)?"Student added Successfully":"Error Adding Student";
     }
 
+    @PutMapping("/{id}")
+    public String updateStudent(@PathVariable int id, @RequestBody Student student){
+        return service.updateStudent(id,student)?"Student updated Successfully":"Error Updating Student";
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteStudent(@PathVariable int id){
+        return service.deleteStudent(id)?"Student deleted Successfully":"Error Deleting Student";
+    }
+
 }
