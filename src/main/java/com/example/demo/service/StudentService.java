@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.DTO.StudentDTO;
 import com.example.demo.model.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.exception.ResourceNotFoundException;
@@ -39,4 +40,9 @@ public class StudentService {
             repo.delete(findStudent);
             return true;
     }
+
+    public StudentDTO convertToDTO(Student student){
+        return new StudentDTO(student.getId(),student.getName());
+    }
+
 }

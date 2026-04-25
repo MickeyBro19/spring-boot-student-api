@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.DTO.StudentDTO;
 import com.example.demo.model.Student;
 import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,9 @@ public class StudentController {
     StudentService service;
 
     @GetMapping
-    public ResponseEntity<List<Student>> getAllStudents(){
-        return ResponseEntity.status(HttpStatus.OK).body(service.getAllStudent());
+    public ResponseEntity<List<StudentDTO>> getAllStudents(){
+        List<StudentDTO> DTO=service.getAllStudent().stream().map(service::convertToDTO).toList();
+        return ResponseEntity.status(HttpStatus.OK).body(DTO);
     }
 
     @GetMapping("/{id}")
