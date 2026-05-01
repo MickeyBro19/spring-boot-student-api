@@ -1,6 +1,6 @@
 # 🚀 Student Management API (Spring Boot)
 
-A RESTful backend application built using Spring Boot that demonstrates core backend development concepts including CRUD operations, database integration, exception handling, security, pagination, logging, and file uploads.
+A RESTful backend application built using Spring Boot that demonstrates core backend development concepts including CRUD operations, database integration, exception handling, security, pagination, logging.
 
 ---
 
@@ -37,7 +37,6 @@ This project simulates a real-world backend system for managing student data. It
 * DTO-based response shaping
 * Pagination & Sorting
 * Logging (Console + File)
-* File Upload API
 * Basic Authentication (Spring Security)
 
 ---
@@ -117,13 +116,6 @@ Log levels:
 * INFO → Normal operations
 * WARN → Suspicious operations
 * ERROR → Exceptions
-
----
-
-## 📁 File Upload
-
-* Files are stored locally in `/uploads`
-* Max file size: 5MB
 
 ---
 
